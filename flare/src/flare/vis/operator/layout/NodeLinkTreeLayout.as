@@ -310,7 +310,7 @@ package flare.vis.operator.layout
 					n.y = _ay + d;
 					break;
 				case Orientation.BOTTOM_TO_TOP:
-					n.y = _ax - d;
+					n.y = _ay - d;
 					break;
 				default:
 					throw new Error("Unrecognized orientation value");
