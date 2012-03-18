@@ -130,7 +130,7 @@ package flare.vis.operator.layout
 					o.alpha = 0;
 					o.mouseEnabled = false;
 					if (n.parentEdge != null)
-						_t.$(n.parentEdge).alpha = false;
+						_t.$(n.parentEdge).alpha = 0;
             	});
 	        }
 	        
