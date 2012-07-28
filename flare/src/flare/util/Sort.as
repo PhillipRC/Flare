@@ -85,7 +85,7 @@ package flare.util
 		 *  application of the less-than and greater-than operators.
 		 * @param a the first value to compare
 		 * @param b the second value to compare
-		 * @return -1 if a < b, 1 if a > b, 0 otherwise.
+		 * @return -1 if a &lt; b, 1 if a &gt; b, 0 otherwise.
 		 */
 		public static function defaultComparator(a:*, b:*):int {
 			return a>b ? 1 : a<b ? -1 : 0;

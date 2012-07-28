@@ -12,7 +12,7 @@ package flare.vis.operator.layout
 	 * connected by edges, and for radial space-filling ("sunburst") diagrams.
 	 * To generate space-filling layouts, nodes should have their shape
 	 * property set to <code>Shapes.WEDGE</code> and the layout instance should
-	 * have the <code>useNodeSize<code> property set to false.
+	 * have the <code>useNodeSize</code> property set to false.
 	 * 
 	 * <p>The algorithm used is an adaptation of a technique by Ka-Ping Yee,
 	 * Danyel Fisher, Rachna Dhamija, and Marti Hearst, published in the paper

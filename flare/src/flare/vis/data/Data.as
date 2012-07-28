@@ -43,7 +43,7 @@ package flare.vis.data
 	 * parameterized using the <code>treePolicy</code>,
 	 * <code>treeEdgeWeight</code>, and <code>root</code> properties of this
 	 * class. Alternatively, clients can create their own spanning trees as
-	 * a <code>Tree</code instance and set this as the spanning tree.</p>
+	 * a <code>Tree</code> instance and set this as the spanning tree.</p>
 	 * 
 	 * @see flare.vis.data.DataList
 	 * @see flare.analytics.graph.SpanningTree

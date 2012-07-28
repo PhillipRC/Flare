@@ -31,7 +31,7 @@ package flare.vis.operator.label
 		 *  If this value is a string or property instance, the label text will
 		 *  be pulled directly from the named property. If this value is a
 		 *  Function or Expression instance, the value will be used to set the
-		 *  <code>textFunction<code> property and the label text will be
+		 *  <code>textFunction</code> property and the label text will be
 		 *  determined by evaluating that function.
 		 */
 		public function StackedAreaLabeler(source:*=null,

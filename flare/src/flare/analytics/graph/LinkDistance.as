@@ -14,7 +14,7 @@ package flare.analytics.graph
 	 * include weighted edges in the calculation, use the
 	 * <code>ShortestPaths</code> operator instead.
 	 * 
-	 * </p>Nodes are annotated with both the computed distance and the incoming
+	 * <p>Nodes are annotated with both the computed distance and the incoming
 	 * edge in the shortest link distance path to a source node. Edges are
 	 * annotated with a Boolean value indicating whether or not the edge lies
 	 * along one of these computed shortest paths.</p>

@@ -18,7 +18,7 @@ package flare.vis.operator.layout
 	 * 
 	 * <p>If the <code>treeLayout</code> property is <code>false</code>, all
 	 * nodes will be treated the same and the result will be a "bubble" chart.
-	 * If the <code>treeLayout<code> property is <code>true<code>, circles will
+	 * If the <code>treeLayout</code> property is <code>true</code>, circles will
 	 * be nested inside each other according to the tree structure of the data.
 	 * </p>
 	 * 

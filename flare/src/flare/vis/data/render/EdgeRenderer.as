@@ -18,7 +18,7 @@ package flare.vis.data.render
 	 * The line rendering properties are set by the <code>setLineStyle</code>
 	 * method, which can be overridden by subclasses. By default, the line
 	 * rendering settings are determined using default property values set
-	 * on this class (for example, the <code>scaleMode<code> and 
+	 * on this class (for example, the <code>scaleMode</code> and
 	 * <code>caps</code> properties).
 	 */
 	public class EdgeRenderer implements IRenderer

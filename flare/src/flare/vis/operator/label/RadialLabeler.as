@@ -10,14 +10,14 @@ package flare.vis.operator.label
 	/**
 	 * Labeler that positions labels around a circle in polar coordinates.
 	 * 
-	 * <p>If <code>rotateLabels</code> is set to <codetrue</code>, labels will
+	 * <p>If <code>rotateLabels</code> is set to <code>true</code>, labels will
 	 * be rotated such that they align radially. That is, the will be aligned
 	 * along lines emanating out of the center of the circle. In this case, it
 	 * is recommend that each label's <code>textMode</code> property be set to
 	 * <code>TextSprite.EMBED</code> and that the appropriate fonts be
 	 * embedded in your application. Otherwise, the text labels may be
 	 * illegible due to rotation artifacts (for <code>BITMAP</code> labels) or
-	 * will disappear alltogether (for <code>DEVICE</code> labels).</p>
+	 * will disappear altogether (for <code>DEVICE</code> labels).</p>
 	 */
 	public class RadialLabeler extends Labeler
 	{
@@ -36,11 +36,11 @@ package flare.vis.operator.label
 		 *  If this value is a string or property instance, the label text will
 		 *  be pulled directly from the named property. If this value is a
 		 *  Function or Expression instance, the value will be used to set the
-		 *  <code>textFunction<code> property and the label text will be
+		 *  <code>textFunction</code> property and the label text will be
 		 *  determined by evaluating that function.
 		 * @param rotate flag indicating if labels should be rotated to align
 		 *  along the radius. If true, all text sprite labels should use
-		 *  embedded fonts to keep the rotated labels legibile. If false,
+		 *  embedded fonts to keep the rotated labels legible. If false,
 		 *  labels will instead have their horizontal and vertical anchor
 		 *  settings adjusted according to their angle.
 		 * @param format optional text formatting information for labels

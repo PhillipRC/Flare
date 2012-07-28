@@ -15,7 +15,7 @@ package flare.animate
 		function evaluate(time:Number) : Boolean;
 		
 		/** A unique name identifying this schedulable object. The default
-		 *  is <code>null<code>. If non-null, any other scheduled items with
+		 *  is <code>null</code>. If non-null, any other scheduled items with
 		 *  the same id will be canceled upon scheduling.
 		 *  
 		 *  <p>Once an item has been scheduled, it's id should not be changed.

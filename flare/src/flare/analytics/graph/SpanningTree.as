@@ -17,7 +17,7 @@ package flare.analytics.graph
 	 * <p>This class can annotate graph edges as belonging to the spanning tree
 	 * (done if the <code>annotateEdges</code> property is true), and can
 	 * construct a <code>Tree</code> instance (done if the
-	 * <code>buildTree<code> property is true). Generated <code>Tree<code>
+	 * <code>buildTree</code> property is true). Generated <code>Tree</code>
 	 * instances are stored in the <code>tree</code> property. Generated trees
 	 * contain the original nodes and edges in the input graph, and any
 	 * previous parent or child links for input nodes will be cleared and

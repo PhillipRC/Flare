@@ -84,7 +84,7 @@ package flare.vis.operator.label
 		public function set group(g:String):void { _group = g; setup(); }
 		
 		/** The source property that provides the label text. This
-		 *  property will be ignored if the <code>textFunction<code>
+		 *  property will be ignored if the <code>textFunction</code>
 		 *  property is non-null. */
 		public function get source():String { return _source.name; }
 		public function set source(s:String):void { _source = Property.$(s); }
@@ -179,7 +179,7 @@ package flare.vis.operator.label
 		 *  If this value is a string or property instance, the label text will
 		 *  be pulled directly from the named property. If this value is a
 		 *  Function or Expression instance, the value will be used to set the
-		 *  <code>textFunction<code> property and the label text will be
+		 *  <code>textFunction</code> property and the label text will be
 		 *  determined by evaluating that function.
 		 * @param group the data group to process
 		 * @param format optional text formatting information for labels
@@ -292,7 +292,7 @@ package flare.vis.operator.label
 		
 		
 		/**
-		 * Retrives and optionally creates a label TextSprite for the given
+		 * Retrieves and optionally creates a label TextSprite for the given
 		 *  data sprite. 
 		 * @param d the data sprite to process
 		 * @param create if true, a new label will be created as needed
