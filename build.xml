@@ -177,11 +177,10 @@
       <arg value="-footer=${doc.copyright}. Created ${datetime}."/>
       <!-- ridiculously enough, it appears all package descriptions must
            be provided using command line arguments...                     -->
-      <arg value="-package=flare.analytics,${doc.flare.analytics}"/>
       <arg value="-package=flare.analytics.cluster,${doc.flare.analytics.cluster}"/>
       <arg value="-package=flare.analytics.graph,${doc.flare.analytics.graph}"/>
       <arg value="-package=flare.analytics.optimization,${doc.flare.analytics.optimization}"/>
-	<arg value="-package=flare.animate,${doc.flare.animate}"/>
+      <arg value="-package=flare.animate,${doc.flare.animate}"/>
       <arg value="-package=flare.animate.interpolate,${doc.flare.animate.interpolate}"/>
       <arg value="-package=flare.data,${doc.flare.data}"/>
       <arg value="-package=flare.data.converters,${doc.flare.data.converters}"/>

@@ -6,7 +6,6 @@ doc.copyright=&#169; 2007-2008 Regents of the University of California
 doc.source=flare/src,flare/src-flex-integration/flare,flare/lib
 
 # package-level documentation properties for use in the flare API documention
-doc.flare.analytics=The flare.analytics package provides classes for analyzing data and optimizing presentation.
 doc.flare.analytics.cluster=The flare.analytics.cluster package provides classes for clustering data into groups.
 doc.flare.analytics.graph=The flare.analytics.graph package provides classes for analyzing network structures.
 doc.flare.analytics.optimization=The flare.analytics.optimization package provides classes for optimizing the presentation of visualizations.
