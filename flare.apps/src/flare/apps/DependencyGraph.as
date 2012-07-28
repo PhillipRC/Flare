@@ -1,7 +1,5 @@
 package flare.apps
 {
-	import com.adobe.serialization.json.JSON;
-	
 	import flare.display.DirtySprite;
 	import flare.display.TextSprite;
 	import flare.query.methods.div;
@@ -58,7 +56,7 @@ package flare.apps
 			// load data file
 			var ldr:URLLoader = new URLLoader(new URLRequest(_url));
 			_bar.loadURL(ldr, function():void {
-				var obj:Array = JSON.decode(ldr.data as String) as Array;
+				var obj:Array = JSON.parse(ldr.data as String) as Array;
 				var data:Data = buildData(obj);
 	            visualize(data);
 	            _bar = null;
