@@ -1,2 +1,5 @@
 flare/bin/flare.swc
 .DS_Store
+user.properties
+bin-debug/
+/docs/

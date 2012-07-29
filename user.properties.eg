@@ -1,0 +1,4 @@
+# save a copy of this file as user.properties and then edit the properties below
+
+FLEX_HOME = C:/pkg/flex/
+asdoc = ${FLEX_HOME}bin/asdoc.exe

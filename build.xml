@@ -4,9 +4,9 @@
   <!-- =================================================================== -->
   <!-- Import Flex Ant Tasks, Set Flex Home and asdoc                      -->
   <!-- =================================================================== -->
+  <property file="user.properties"/>
+  <fail unless="FLEX_HOME" message="FLEX_HOME needs to be defined. Refer to user.properties.eg for a way to do this."/>
   <property name="LOCALE" value="en_US"/>
-  <property name="FLEX_HOME" value="C:/pkg/flex/"/>
-  <property name="asdoc" value="${FLEX_HOME}bin/asdoc.exe"/>
   <taskdef resource="flexTasks.tasks"
            classpath="${FLEX_HOME}ant/lib/flexTasks.jar" />
 
@@ -46,7 +46,7 @@
     <echo message=""/>
     <echo message=" available targets are:"/>
     <echo message=""/>
-    <echo message="   all        --> builds flare and demos in ./build}"/>
+    <echo message="   all        --> builds flare, apps, demos and tests in ./build"/>
     <echo message="   flare      --> builds the flare libraries in ./build"/>
     <echo message="   apps       --> builds the apps project in ./build"/>
     <echo message="   demos      --> builds the demos app in ./build"/>
