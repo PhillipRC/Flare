@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="false" version="1">
   <includeClasses>
-    <classEntry path="com.adobe.serialization.json.JSON"/>
-    <classEntry path="com.adobe.serialization.json.JSONDecoder"/>
-    <classEntry path="com.adobe.serialization.json.JSONEncoder"/>
-    <classEntry path="com.adobe.serialization.json.JSONParseError"/>
-    <classEntry path="com.adobe.serialization.json.JSONToken"/>
-    <classEntry path="com.adobe.serialization.json.JSONTokenType"/>
-    <classEntry path="com.adobe.serialization.json.JSONTokenizer"/>
     <classEntry path="flare.analytics.cluster.AgglomerativeCluster"/>
     <classEntry path="flare.analytics.cluster.CommunityStructure"/>
     <classEntry path="flare.analytics.cluster.HierarchicalCluster"/>
