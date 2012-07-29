@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="flare">
+    <configurations>
+      <configuration name="flare" output-type="Library" output-file="flare.swc" output-folder="$MODULE_DIR$/bin">
+        <dependencies target-player="11.1">
+          <sdk name="4.6" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.locale" value="en_US" />
+            <entry key="compiler.namespaces.namespace" value="http://ns.flare.com/2010/mxml&#9;$MODULE_DIR$/src-flex-integration/flex-manifest.xml" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src-flex-integration" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="4.6" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+
