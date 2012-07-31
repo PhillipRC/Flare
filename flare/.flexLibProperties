@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<flexLibProperties includeAllClasses="false" version="1">
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="1">
   <includeClasses>
     <classEntry path="flare.analytics.cluster.AgglomerativeCluster"/>
     <classEntry path="flare.analytics.cluster.CommunityStructure"/>
@@ -31,6 +31,7 @@
     <classEntry path="flare.animate.interpolate.ObjectInterpolator"/>
     <classEntry path="flare.animate.interpolate.PointInterpolator"/>
     <classEntry path="flare.animate.interpolate.RectangleInterpolator"/>
+    <classEntry path="flare.animate.interpolate.VectorInterpolator"/>
     <classEntry path="flare.data.DataField"/>
     <classEntry path="flare.data.DataSchema"/>
     <classEntry path="flare.data.DataSet"/>
@@ -47,6 +48,7 @@
     <classEntry path="flare.display.LineSprite"/>
     <classEntry path="flare.display.RectSprite"/>
     <classEntry path="flare.display.TextSprite"/>
+    <classEntry path="flare.display.buttons.SpriteButton"/>
     <classEntry path="flare.display.buttons.TextButton"/>
     <classEntry path="flare.display.render.BackgroundRenderer"/>
     <classEntry path="flare.display.render.BitmapRenderer"/>
@@ -146,6 +148,7 @@
     <classEntry path="flare.util.Sort"/>
     <classEntry path="flare.util.Stats"/>
     <classEntry path="flare.util.Strings"/>
+    <classEntry path="flare.util.Vectors"/>
     <classEntry path="flare.util.gradient.Gradient"/>
     <classEntry path="flare.util.gradient.GradientStop"/>
     <classEntry path="flare.util.heap.FibonacciHeap"/>
@@ -211,6 +214,7 @@
     <classEntry path="flare.vis.operator.filter.FisheyeTreeFilter"/>
     <classEntry path="flare.vis.operator.filter.GraphDistanceFilter"/>
     <classEntry path="flare.vis.operator.filter.VisibilityFilter"/>
+    <classEntry path="flare.vis.operator.label.Labeler"/>
     <classEntry path="flare.vis.operator.label.RadialLabeler"/>
     <classEntry path="flare.vis.operator.label.StackedAreaLabeler"/>
     <classEntry path="flare.vis.operator.layout.AxisLayout"/>
