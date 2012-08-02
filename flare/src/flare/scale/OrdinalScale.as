@@ -1,7 +1,8 @@
 package flare.scale
 {
-	import flash.utils.Dictionary;
 	import flare.util.Arrays;
+	
+	import flash.utils.Dictionary;
 	
 	/**
 	 * Scale for ordered sequential data. This supports both numeric and
@@ -67,7 +68,7 @@ package flare.scale
 		protected function buildLookup():void
         {
         	_lookup = new Dictionary();
-            for (var i:uint = 0; i < _ordinals.length; ++i)
+            for (var i:int = 0, n:int = _ordinals.length; i < n; ++i)
                 _lookup[ordinals[i]] = i;
         }
 		
@@ -82,13 +83,13 @@ package flare.scale
 		/**
 		 * Returns the index of the input value in the ordinal array
 		 * @param value the value to lookup
+		 * @param defaultIndex the index to return if value is not found. Defaults to -1.
 		 * @return the index of the input value. If the value is not contained
-		 *  in the ordinal array, this method returns -1.
+		 *  in the ordinal array, this method returns <code>defaultIndex</code>.
 		 */
-		public function index(value:Object):int
+		public function index(value:Object, defaultIndex:int = -1):int
 		{
-			var idx:* = _lookup[value];
-			return (idx==undefined ? -1 : int(idx));
+			return value in _lookup ? _lookup[value] : defaultIndex;
 		}
 		
 		/** @inheritDoc */
@@ -96,11 +97,8 @@ package flare.scale
 		{
 			if (_ordinals==null || _ordinals.length==0) return 0.5;
 			
-			if (_flush) {
-				return Number(_lookup[value]) / (_ordinals.length-1);
-			} else {
-				return (0.5 + _lookup[value]) / _ordinals.length;
-			}
+            var idx:Number = index(value, 0);
+		    return _flush ? idx / (_ordinals.length-1) : (0.5 + idx) / _ordinals.length;
 		}
 		
 		/** @inheritDoc */
