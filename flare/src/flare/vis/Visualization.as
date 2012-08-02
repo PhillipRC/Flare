@@ -34,7 +34,7 @@ package flare.vis
 	 *  <li>A <code>ControlList</code> of interactive controls that enable
 	 *      interaction with the visualized data.</li>
 	 *  <li>An <code>Axes</code> instance for presenting axes for metric
-	 *      data visualizations. Axes are often configuring automatically by
+	 *      data visualizations. Axes are often configured automatically by
 	 *      the visualization's operators.</li>
 	 * </ul>
 	 * 
