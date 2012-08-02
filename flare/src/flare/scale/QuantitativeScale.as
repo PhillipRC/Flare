@@ -31,9 +31,11 @@ package flare.scale
 			flush:Boolean=false, labelFormat:String=Strings.DEFAULT_NUMBER)
 		{
 			this.base = base;
-			this.dataMin = min;
-			this.dataMax = max;
-			this.flush = flush;
+            _dmin = min;
+            _dmax = max;
+            _flush = flush;
+            updateScale();
+
 			this.labelFormat = labelFormat;
 		}
 
@@ -131,6 +133,7 @@ package flare.scale
 		protected function getStep(min:Number, max:Number):Number
 		{
 			var range:Number = max - min;
+            if (range == 0) range = max > 0 ? max : 1000;
 			var exp:Number = Math.round(Maths.log(range, _base)) - 1;
 			return Math.pow(base, exp);
 		}
