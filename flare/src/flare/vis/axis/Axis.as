@@ -66,6 +66,7 @@ package flare.vis.axis
 		protected var _labelFormat		:String 	= null;
 		protected var _labelTextMode	:int 		= TextSprite.BITMAP;
 		protected var _labelTextFormat	:TextFormat = new TextFormat("Arial",12,0);
+        protected var _labelTextFunction:Function;    // f(val:*):String
 		
 		// title settings
 		protected var _axisTitleText	:String		= "";
@@ -174,12 +175,17 @@ package flare.vis.axis
 		/** TextFormat (font, size, style) for axis label text. */
 		public function get labelTextFormat():TextFormat { return _labelTextFormat; }
 		public function set labelTextFormat(f:TextFormat):void { _labelTextFormat = f; updateLabels(); }
-		
+
+        /** Optional function for determining label text. 
+        * <p>Expected method signature: <code>function(val:Object):String</code></p> */
+        public function get labelTextFunction():Function { return _labelTextFunction; }
+        public function set labelTextFunction(value:Function):void { _labelTextFunction = value; updateLabels(); }
+
 		/** The text rendering mode to use for label TextSprites.
 		 *  @see flare.display.TextSprite. */
 		public function get labelTextMode():int { return _labelTextMode; }
 		public function set labelTextMode(m:int):void { _labelTextMode = m; updateLabels(); }
-		
+
 		/** String formatting pattern used for axis labels, overwrites any
 		 *  formatting pattern used by the <code>axisScale</code>. If null,
 		 *  the formatting pattern for the <code>axisScale</code> is used. */
@@ -643,8 +649,12 @@ package flare.vis.axis
 			label.verticalAnchor = _anchorV;
 			label.rotation = (180/Math.PI) * _labelAngle;
 			label.textMode = _labelTextMode;
-			label.text = _labelFormat==null ? axisScale.label(label.value)
-					   : Strings.format(_labelFormat, label.value);
+            
+            var val:Object = label.value;
+			label.text = _labelTextFunction === null ? 
+                               _labelFormat === null ? axisScale.label(val) : 
+                                                       Strings.format(_labelFormat, val) :
+                               _labelTextFunction(val);
 		}
 		
 		protected function updateTitle() : void
