@@ -95,9 +95,7 @@ package flare.flex.vis
 		{
 			super();
 			
-			data ||= new Data();
-			
-			_data          = data;
+			this.data = data || new Data();
 			_visualization = new Visualization( _data as Data );
 			_visualization.removeEventListener( Event.RENDER, _visualization.setHitArea );
 		}
