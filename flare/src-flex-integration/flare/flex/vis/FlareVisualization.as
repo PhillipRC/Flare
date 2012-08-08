@@ -5,7 +5,7 @@ package flare.flex.vis
 	import flare.vis.axis.Axes;
 	import flare.vis.axis.CartesianAxes;
 	import flare.vis.data.Data;
-	
+
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.geom.Rectangle;
@@ -33,7 +33,7 @@ package flare.flex.vis
 		 */
 		public function set operators(a:Array):void {
 			_visualization.operators.list = a;
-			_visualization.update();
+			update();
 		}
 		
 		/** 
@@ -42,7 +42,7 @@ package flare.flex.vis
 		 */
 		public function set controls(a:Array):void {
 			_visualization.controls.list = a;
-			_visualization.update();
+			update();
 		}
 		
 		/** 
@@ -99,6 +99,12 @@ package flare.flex.vis
 			_visualization = new Visualization( _data as Data );
 			_visualization.removeEventListener( Event.RENDER, _visualization.setHitArea );
 		}
+        
+        public function update():void
+        {
+            needsUpdate = true;
+            invalidateProperties();
+        }
 		
 		// ========================================
 		// Protected methods
@@ -134,8 +140,16 @@ package flare.flex.vis
 				else						throw new Error( "Unrecognized data set type: " + data );
 				
 				_visualization.operators.setup();
-				_visualization.update();
+				needsUpdate = true;
 			}
+            
+            if (needsUpdate)
+            {
+                needsUpdate = false;
+                
+                _visualization.update();
+                invalidateDisplayList();
+            }
 		}
 		
 		/**
@@ -163,7 +177,7 @@ package flare.flex.vis
 			
 			visualizationMask.cacheAsBitmap = true;
 		}
-		
+
 		// ========================================
 		// Protected properties
 		// ========================================	
@@ -186,6 +200,11 @@ package flare.flex.vis
 		/**
 		 * Mask for Flare Visualization.
 		 */
-		protected var visualizationMask:Sprite;		
+		protected var visualizationMask:Sprite;
+        
+        /**
+        * Indicates whether the visualization needs to be updated.
+        */
+        protected var needsUpdate:Boolean;
 	}
 }
